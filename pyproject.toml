@@ -1,0 +1,45 @@
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["rectes*"]
+exclude = ["rectes.tests*"]
+namespaces = false
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rectes"
+version = "0.1.0"
+authors = [
+  { name="Maximos Nikiforakis", email="nikiforos@live.co.uk" }
+]
+description = "Simple Python AST evaluator"
+keywords = ["ast", "evaluator", "interpreter"]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.13"
+dependencies = []
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.13",
+  "Natural Language :: English",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Software Development :: Interpreters",
+]
+
+[project.urls]
+Homepage = "https://github.com/Maxcode123/rectes"
+Issues = "https://github.com/Maxcode123/rectes/issues"
+Documentation = "https://maximosnikiforakis.gr/rectes/"
+
+[dependency-groups]
+dev = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.20",
+    "mkdocstrings[python]>=0.30.0",
+    "ruff>=0.16.10",
+    "ty>=0.0.84",
+    "unittest-extensions>=0.4.0",
+]

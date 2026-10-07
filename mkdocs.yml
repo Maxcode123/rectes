@@ -1,0 +1,47 @@
+site_name: rectes
+site_url: https://maximosnikiforakis.gr/rectes/
+repo_url: https://github.com/Maxcode123/rectes
+repo_name: Maxcode123/rectes
+nav:
+  - Get started:
+    - What is rectes?: index.md
+    - Installation: installation.md
+
+  - API Documentation:
+    - rectes: rectes.md
+
+theme:
+  name: material
+  font: false
+  logo: assets/favicon.svg
+  favicon: assets/favicon.svg
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - content.code.copy
+  # Dark only, like the lectes and syntactes docs: arcade.css maps slate's
+  # colours onto the rectes palette.
+  palette:
+    scheme: slate
+    primary: custom
+    accent: custom
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - stylesheets/arcade.css
+
+plugins:
+- mkdocstrings
+- search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
